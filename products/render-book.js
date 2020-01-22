@@ -13,12 +13,15 @@ function renderBook(books) {
     li.appendChild(h5);
 
     const img = document.createElement('img');
-    img.src = books.image;
+    img.src = '../assets/' + books.image;
     img.alt = books.title;
     li.appendChild(img);
 
     const p = document.createElement('p');
     p.className = books.price;
+
+    const usd = '$' + books.price;
+    p.textContent = usd;
 
     const button = document.createElement('button');
     button.value = books.id;
