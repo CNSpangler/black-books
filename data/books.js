@@ -18,7 +18,7 @@ const spaceOpera = {
     id: spaceOpera,
     title: 'Space Opera',
     author: 'Catherynne M. Valente',
-    image: './assets/',
+    image: './assets/spaceOpera.jpg',
     price: 10.95
 };
 
@@ -26,7 +26,7 @@ const flying = {
     id: flying,
     title: 'The Book of Flying',
     author: 'Keith Miller',
-    image: './assets/',
+    image: './assets/flying.jpg',
     price: 4.95
 };
 
@@ -34,7 +34,7 @@ const aegypt1 = {
     id: aegypt1,
     title: 'The Solitudes',
     author: 'John Crowley',
-    image: './assets/',
+    image: './assets/aegypt1.jpg',
     price: 6.95
 };
 
@@ -42,7 +42,7 @@ const aegypt2 = {
     id: aegypt2,
     title: 'Love & Sleep',
     author: 'John Crowley',
-    image: './assets/',
+    image: './assets.aegypt2.jpg',
     price: 6.95
 };
 
@@ -50,7 +50,7 @@ const aegypt3 = {
     id: aegypt3,
     title: 'Daemonomania',
     author: 'John Crowley',
-    image: './assets/',
+    image: './assets/aegypt3.jpg',
     price: 6.95
 };
 
@@ -58,7 +58,7 @@ const aegypt4 = {
     id: aegypt4,
     title: 'Endless Things',
     author: 'John Crowley',
-    image: './assets/',
+    image: './assets/aegypt4.jpg',
     price: 6.95
 };
 
