@@ -1,16 +1,23 @@
-// IMPORT MODULES under test here:
-// import example from '../src/example.js';
+import renderBook from '../products/render-book.js';
 
 const test = QUnit.test;
 
-test('time to test a function', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
+const longWay = {
+    id: 'longWay',
+    title: 'The Long Way to a Small, Angry Planet',
+    author: 'Becky Chambers',
+    image: '../assets/longWay.jpg',
+    type: 'paperback',
+    price: 7.95
+};
 
-    //Act 
-    // Call the function you're testing and set the result to a const
+const longWayLi = renderBook(longWay);
+const result = longWayLi.outerHTML;
 
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(true, false);
+console.log(result);
+
+test('should convert object to html li output', function(assert) {
+    const expected = '<li id="longWay" class="paperback" title="The Long Way to a Small, Angry Planet"><h3>The Long Way to a Small, Angry Planet</h3><h5>by Becky Chambers</h5><img src="../assets/longWay.jpg" alt="The Long Way to a Small, Angry Planet"><p class="7.95"><button value="longWay">Add</button></p></li>';
+
+    assert.equal(expected, result);
 });
