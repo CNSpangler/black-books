@@ -47,7 +47,7 @@ const aegypt2 = {
     id: 'aegypt2',
     title: 'Love & Sleep',
     author: 'John Crowley',
-    image: '../assets.aegypt2.jpg',
+    image: '../assets/aegypt2.jpg',
     type: 'paperback',
     price: 6.95
 };

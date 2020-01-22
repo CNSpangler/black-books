@@ -13,3 +13,7 @@ header {
 nav {
    
 }
+
+li {
+    list-style: none;
+}

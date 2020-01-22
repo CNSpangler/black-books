@@ -1,4 +1,8 @@
 import books from '../data/books.js';
 import renderBook from './render-book.js';
 
-renderBook(books[1]);
+for (let i = 0; i <= books.length; i++) {
+    const bookList = document.getElementById('book-list');
+    const book = renderBook(books[i]);
+    bookList.appendChild(book);
+}
