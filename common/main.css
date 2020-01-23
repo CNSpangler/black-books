@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Special Elite', cursive;
+}
+
+header {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+nav {
+   
+}
+
+li {
+    list-style: none;
+}
