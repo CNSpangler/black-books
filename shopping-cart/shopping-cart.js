@@ -17,8 +17,11 @@ function shoppingCart(cartArray) {
     return tBody;
 }
 
-// call shoppingCart and append the new, filled tr to the tBody on the page
-shoppingCart(schroedingersCart);
+// get 'CART' from local storage, plug that data into shoppingCart function, append new tBody to table on cart page
+const cart = localStorage.getItem('CART');
+JSON.stringify(cart);
+console.log(cart);
+shoppingCart(cart);
 table.appendChild(tBody);
 
 // calculate total price based on all added line items

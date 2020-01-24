@@ -1,4 +1,5 @@
 import { toUSD } from '../common/utils.js';
+import books from '../data/books.js';
 
 export default function renderLineItems(lineItem, book) {
     const tr = document.createElement('tr');
@@ -8,11 +9,11 @@ export default function renderLineItems(lineItem, book) {
     tr.appendChild(quantityCell);
 
     const itemCell = document.createElement('td');
-    itemCell.textContent = book.title;
+    itemCell.textContent = books.title;
     tr.appendChild(itemCell);
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = toUSD(book.price);
+    priceCell.textContent = toUSD(books.price);
     tr.appendChild(priceCell);
 
     const totalCell = document.createElement('td');

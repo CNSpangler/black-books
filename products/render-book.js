@@ -1,3 +1,5 @@
+import { findById } from '../common/utils.js';
+
 // import { findById } from '../common/utils';
 
 // let lineItem = findById(somethignggngn, somethidgdgghghd)
@@ -33,8 +35,9 @@ function renderBook(books) {
     
     // add event listener for addButton
     button.addEventListener('click', () => {
-        const schroedingersCart = localStorage.getItem('CART');
+        let schroedingersCart = localStorage.getItem('CART');
         let cart;
+        
     // check for cart in local storage, put item in cart or generate a cart to fill
         if (schroedingersCart) {
             cart = JSON.parse(schroedingersCart);
@@ -42,19 +45,23 @@ function renderBook(books) {
         else {
             cart = [];
         }
+// find each item and either add a first instance to cart or add 1 to quantity already in cart
+        let cartItem = findById(cart, books.id);
+        if (cartItem) {
+            cartItem.quantity++;
+        } else {
+            cartItem = {
+                id: books.id,
+                quantity: 1,
+            };
 
-    // for each clicked item, add an initial object to the cart array or add 1 to quantity of that item
-        cart.forEach((cartItem) => {
-            if (cartItem) {
-                cartItem.quantity++;
-            } else {
-                const cartItem = {
-                    id: cartItem.id,
-                    quantity: 1,
-                };
-            }
-            localStorage.add(JSON.stringify(cartItem));
-        });
+            cart.push(cartItem);
+        }
+
+        schroedingersCart = JSON.stringify(cart);
+        localStorage.setItem('CART', schroedingersCart);
+
+        alert('1 copy of ' + books.title + ' added to cart.');
     });
     
     p.appendChild(button);
