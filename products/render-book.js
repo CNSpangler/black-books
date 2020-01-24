@@ -1,5 +1,4 @@
 import { findById } from '../common/utils.js';
-import books from '../data/books.js';
 
 function renderBook(book) {
     const li = document.createElement('li');

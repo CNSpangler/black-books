@@ -36,3 +36,16 @@ table.appendChild(tBody);
 const orderTotal = document.getElementById('total');
 orderTotal.textContent = calcOrderTotal(cart, books);
 
+// add functionality to Place Order button
+const orderButton = document.getElementById('order-button');
+
+orderButton.addEventListener('click', () => {
+    if (!schroedingersCart) {
+        orderButton.disabled = true;
+    } else {
+        alert(JSON.stringify(cart, true, 2));
+        localStorage.removeItem('CART');
+        window.location = '../index.html';
+    }
+});
+
