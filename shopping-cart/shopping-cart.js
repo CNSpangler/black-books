@@ -18,9 +18,17 @@ function shoppingCart(cartArray) {
 }
 
 // get 'CART' from local storage, plug that data into shoppingCart function, append new tBody to table on cart page
-const cart = localStorage.getItem('CART');
+let schroedingersCart = localStorage.getItem('CART');
+let cart;
+        
+if (schroedingersCart) {
+    cart = JSON.parse(schroedingersCart);
+}
+else {
+    cart = [];
+}
+
 JSON.stringify(cart);
-console.log(cart);
 shoppingCart(cart);
 table.appendChild(tBody);
 

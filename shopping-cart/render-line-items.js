@@ -9,11 +9,11 @@ export default function renderLineItems(lineItem, book) {
     tr.appendChild(quantityCell);
 
     const itemCell = document.createElement('td');
-    itemCell.textContent = books.title;
+    itemCell.textContent = book.title;
     tr.appendChild(itemCell);
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = toUSD(books.price);
+    priceCell.textContent = toUSD(book.price);
     tr.appendChild(priceCell);
 
     const totalCell = document.createElement('td');
