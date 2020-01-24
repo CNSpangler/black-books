@@ -1,6 +1,3 @@
-import cart from "../data/cart.js";
-import books from '../data/books.js';
-
 // tried to write it using .find; did not work
 // export function findById(items, id) {
 //     const match = items.find((thisItem) => {

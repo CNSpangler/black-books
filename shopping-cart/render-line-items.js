@@ -1,5 +1,3 @@
-// import cart from '../data/cart.js';
-// import books from '../data/cart.js';
 import { toUSD } from '../common/utils.js';
 
 export default function renderLineItems(lineItem, book) {
