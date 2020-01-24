@@ -1,1 +1,2 @@
-import './example.test.js';
+import './renderBook.test.js';
+import './utils.test.js';
