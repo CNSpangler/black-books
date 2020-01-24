@@ -30,6 +30,33 @@ function renderBook(books) {
     const button = document.createElement('button');
     button.value = books.id;
     button.textContent = 'Add';
+    
+    // add event listener for addButton
+    button.addEventListener('click', () => {
+        const schroedingersCart = localStorage.getItem('CART');
+        let cart;
+    // check for cart in local storage, put item in cart or generate a cart to fill
+        if (schroedingersCart) {
+            cart = JSON.parse(schroedingersCart);
+        }
+        else {
+            cart = [];
+        }
+
+    // for each clicked item, add an initial object to the cart array or add 1 to quantity of that item
+        cart.forEach((cartItem) => {
+            if (cartItem) {
+                cartItem.quantity++;
+            } else {
+                const cartItem = {
+                    id: cartItem.id,
+                    quantity: 1,
+                };
+            }
+            localStorage.add(JSON.stringify(cartItem));
+        });
+    });
+    
     p.appendChild(button);
 
     li.appendChild(p);

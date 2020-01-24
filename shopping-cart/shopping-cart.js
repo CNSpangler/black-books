@@ -5,28 +5,6 @@ import { findById, calcOrderTotal } from '../common/utils.js';
 const tBody = document.querySelector('tbody');
 const table = document.querySelector('table');
 
-// check for cart in local storage, put item in cart or generate a cart to fill
-const schroedingersCart = localStorage.getItem('CART');
-let cart;
-if (schroedingersCart) {
-    cart = JSON.parse(schroedingersCart);
-}
-else {
-    cart = [];
-}
-
-cart.forEach((cartItem) => {
-    if (cartItem) {
-        cartItem.quantity++;
-    } else {
-        const cartItem = {
-            id: cartItem.id,
-            quantity: 1,
-        }
-    }
-    localStorage.add(JSON.stringify(cartItem));
-}
-
 // define shoppingCart function to get items from local storage, turn ids into actual books, and generate a filled tr for each
 function shoppingCart(cartArray) {
     for (let i = 0; i < cartArray.length; i++) {
@@ -39,10 +17,8 @@ function shoppingCart(cartArray) {
     return tBody;
 }
 
-
-
 // call shoppingCart and append the new, filled tr to the tBody on the page
-shoppingCart(cart);
+shoppingCart(schroedingersCart);
 table.appendChild(tBody);
 
 // calculate total price based on all added line items
