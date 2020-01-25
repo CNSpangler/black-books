@@ -34,7 +34,6 @@ function renderBook(book) {
         let schroedingersCart = localStorage.getItem('CART');
         let cart;
         
-    // check for cart in local storage, put item in cart or generate a cart to fill
         if (schroedingersCart) {
             cart = JSON.parse(schroedingersCart);
         }

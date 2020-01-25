@@ -29,6 +29,10 @@ tfoot {
     border-collapse: collapse;
 }
 
+#order-button {
+    margin-top: 10px;
+}
+
 .word-content {
     text-align: left;
 }

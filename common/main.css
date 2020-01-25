@@ -4,10 +4,40 @@
 }
 
 header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    line-height: 1.4;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+a:hover {
+    color: rgb(243, 103, 10);
+}
+
+a:active {
+    color: yellow;
+}
+
+header {
     background-color: black;
     color: white;
     font-weight: bold;
     padding: 5px;
+    margin-bottom: 15px;
 }
 
 li {
