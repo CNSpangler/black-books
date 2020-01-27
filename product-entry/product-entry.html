@@ -19,12 +19,15 @@
     </nav>
 </header>
 <body>
-    <form>
-        Book Title: <input type="text" name="title">
+    <form id="product-entry-form">
+        Book ID: <input type="text" name="id">
+        Title: <input type="text" name="title">
         Author: <input type="text" name="author">
         Book Image Path: <input type="text" name="image">
+        Type: <input type="text" name="type">
         Price: <input type="text" name="price">
     </form>
+    <button type="submit" id="submit-form">Submit</button>
     <script type="module" src="product-entry.js"></script>
 </body>
 </html>
